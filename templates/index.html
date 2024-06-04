@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soundDB</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+
+    <!-- <div class="sidebar">
+        <div class="sidebar-header">
+            <button class="menu-toggle" onclick="toggleSidebar()">&#9776; 메뉴</button>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#">홈</a></li>
+            <li><a href="#">검색하기</a></li>
+            <li><a href="#">작품</a></li>
+            <li><a href="#">공지</a></li>
+            <li><a href="#">라이브러리</a></li>
+            <li><a href="#">기록</a></li>
+            <li><a href="#">랜덤 작품 조회</a></li>
+        </ul>
+    </div> -->
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ALL</a></li>
+                <li><a href="#">document</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <main>
+        <section class="banner">
+            <img class="banner_img" src="../img/스크린샷 2024-06-04 211437.png" alt="">
+            <h1>VALHASH_DB</h1>
+            <p>VALHASH_DB 사이트 입니다. 배너 영역.</p>
+        </section>
+
+        <section class="notice">
+            <p>포트폴리오용 사이트입니다. 일부 기능이 제한되어있습니다 <a href="#">로그인은여기</a></p>
+        </section>
+
+        <section class="recommendations">
+            <h2>Likes</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="https://i1.sndcdn.com/artworks-rlxEACanzDwlQXjA-qcdydw-t500x500.jpg" alt="이미지 1">
+                    <p>Cloud (feat. VALHASH)</p>
+                </div>
+                <div class="card">
+                    <img src="../img/커버사진2.png" alt="이미지 1">
+                    <p>ㄴ</p>
+                </div>
+                <div class="card">
+                    <img src="../img/커버사진3.png" alt="이미지 1">
+                    <p>제목</p>
+                </div>
+                <div class="card">
+                    <img src="../img/커버사진4.png" alt="이미지 1">
+                    <p>제목</p>
+                </div>
+                {% for entry in chart %}
+                    <div class="card">
+                        <img src="../img/커버사진4.png" alt="이미지 1">
+                        <p>{{ entry.rank }}  :  {{ entry.title }} : {{ entry.artist }}</p>
+                    </div>
+                {% endfor %}
+                
+                {% for entry in chart %}
+                    <li><a href="https://www.youtube.com/results?search_query={{ entry.title }}">
+                        {{ entry.rank }}  :  {{ entry.title }} </a><br><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp{{ entry.artist }}</span></li>
+                {% endfor %}
+
+
+            </div>
+        </section>
+    </main>
+
+
+    <script>
+        // function toggleSidebar() {
+        //     const sidebar = document.querySelector('.sidebar');
+        //     sidebar.classList.toggle('closed');
+        // }
+    </script>
+    
+</body>
+</html>
