@@ -1,0 +1,57 @@
+/* 오디오 플레이어 컨테이너 스타일링 */
+.audio-player {
+    background: #767676;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    width: 700px;
+}
+.audio-player p {
+    font-size: 18px;
+}
+
+/* 오디오 태그 기본 스타일링 재정의 */
+audio {
+    width: 100%;
+    outline: none;
+}
+
+/* 커스텀 오디오 컨트롤 */
+audio::-webkit-media-controls-panel {
+    background-color: #a1a1a1;
+    color: #ffffff;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-pause-button,
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-volume-slider {
+    filter: invert(1);
+}
+
+.songs {
+    
+    
+    /* justify-content: space-between; */
+    
+}
+.song_g{
+    display: flex;
+    padding: 50px;
+}
+.song {
+    
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    margin-left: 40px;
+    border-radius: 10px;
+    width: 130px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.song img {
+    width: 100%;
+    border-radius: 30px;
+    background-image: url(https://i1.sndcdn.com/artworks-rlxEACanzDwlQXjA-qcdydw-t500x500.jpg);
+}
